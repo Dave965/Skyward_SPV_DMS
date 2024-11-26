@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    private int cherries=0;
+    private int coins=0;
     [SerializeField]private Text CherriesText;
     [SerializeField] private AudioSource collectsoundeffect;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,8 +14,8 @@ public class ItemCollector : MonoBehaviour
         {
             collectsoundeffect.Play();
             Destroy(collision.gameObject);
-            cherries++;
-            CherriesText.text = "Cherries: " + cherries;
+            coins++;
+            CherriesText.text = "Coins: " + coins;
         }
     }
 }
